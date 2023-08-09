@@ -30,7 +30,7 @@ function Home() {
 	}, [page, itemCount])
 
 	function changePage(number) {
-		setPage((prevPage) => prevPage + number)
+		if (!(page == 1 && number == -1)) setPage((prevPage) => prevPage + number)
 	}
 
 	function selectHandler(event) {
