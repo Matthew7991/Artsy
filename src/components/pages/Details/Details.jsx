@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import helmut from '../../../assets/img/Image_not_available.png'
 
 function Details() {
 	const [artwork, setArtwork] = useState({})
@@ -22,6 +23,10 @@ function Details() {
 				error.message
 			})
 	}, [])
+	let image_src = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
+	if (!artwork.image_id) {
+		image_src = helmut
+	}
 
 	if (loading) {
 		return <h1>loading</h1>
@@ -29,7 +34,7 @@ function Details() {
 	return (
 		<section>
 			<img
-				src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+				src={image_src}
 				alt=""
 			/>
 			<h2>Name: {artwork.title}</h2>

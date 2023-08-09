@@ -18,6 +18,7 @@ function Home() {
 				return response.json()
 			})
 			.then((data) => {
+				console.log(data)
 				setArts(data.data)
 				setLoading(false)
 			})
@@ -43,17 +44,27 @@ function Home() {
 	return (
 		<div className="home">
 			<h1>Willkommen bei Artsy</h1>
-			<button onClick={() => changePage(-1)}>-</button>
-			<button onClick={() => changePage(+1)}>+</button>
+			{page > 1 && (
+				<>
+					<button onClick={() => setPage(1)}>{'<<'}</button>
+					<button onClick={() => changePage(-1)}>{page - 1}</button>
+				</>
+			)}
+			<button disabled>{page}</button>
+			<button onClick={() => changePage(+1)}>{page + 1}</button>
 			<select
 				onChange={selectHandler}
 				name="item-count"
 				id="item-count"
 				defaultValue={itemCount}>
-				<option value="12">12</option>
-				<option value="24">24</option>
-				<option value="36">36</option>
-				<option value="48">48</option>
+				<option value={12}>12</option>
+				<option value={24}>24</option>
+				<option value={36}>36</option>
+				<option value={48}>48</option>
+				<option value={60}>60</option>
+				<option value={72}>72</option>
+				<option value={84}>84</option>
+				<option value={96}>96</option>
 			</select>
 			{arts.map((art) => {
 				return (
