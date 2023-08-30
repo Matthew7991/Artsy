@@ -1,8 +1,20 @@
-# React + Vite
+# Artsy Fartsy Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Artsy Fartsy website, a platform that allows you to browse Art. This project is built using React.js and HTML.
+The Project was meant for learning pagination.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Details:** View more information about each art piece.
+- **Pagination:** Display the next page with artwork.
+
+## Demo
+
+Check out the live demo of the Pokedex website [here](https://artsy-fartsy.netlify.app/details/26650).
+
+## Technologies Used
+
+- React.js: A JavaScript library for building user interfaces.
+- HTML: The standard markup language for creating web pages.
+
+Happy exploring the world of Art with our Artsy Fartsy website!
